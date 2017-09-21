@@ -1,0 +1,30 @@
+
+    .sect{
+        height: 100%;
+        background-size: cover;
+        background-attachment:  fixed;
+
+    }
+    .subsect{
+        height: 50%;
+        background-color: bisque;
+
+    }
+    .sectone{
+background-image: url(back.jpg);
+    }
+    .secttwo{
+background-image: url(back1.jpg);
+
+    }
+    .sectthree{
+background-image: url(back2.jpeg);
+
+    }
+    .span{
+      color: green;
+    }
+
+
+
+    
