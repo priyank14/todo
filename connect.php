@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost:3307";
+$servername = "localhost";
 $username = "root";
-$password = "priyank21";
+$password = "";
 
 //Checking connection
 
@@ -9,7 +9,7 @@ $con = new mysqli($servername, $username, $password);
 // Check connection
 if ($con->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 // Create database
 
@@ -60,4 +60,3 @@ if ($conn->query($sql) === TRUE) {
 
 
 ?>
-

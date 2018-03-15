@@ -15,6 +15,7 @@ if(empty($text))
 	die();
 }
 $post_id=rand(1,100000000);
+echo "$post_id  $text $user_id ";
 $reg_query=mysqli_query($conn,"INSERT INTO activity(post_id,user_id,email,text1,date1)VALUES('$post_id','$user_id','$email','$text','$date')")or die(mysqli_error($conn));
 header("Location: home.php");
 ?>

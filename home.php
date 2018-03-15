@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['email']))
 {
-	
+
 }
 include("connect.php");
 $email=$_SESSION['email'];
@@ -38,7 +38,7 @@ $no=1;
       <li style="padding-left: 300px"><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Info</a></li>
-    </ul> 
+    </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="logout.php">
           <span class="glyphicon glyphicon-log-out">Log-out</span>
@@ -65,6 +65,7 @@ $no=1;
        $rs=mysqli_query($conn,$query);
        while($row =mysqli_fetch_array($rs))
        {
+				 $post_id=$row['post_id'];
        echo "<div class='col-md-4'>";
          echo "<div class='panel panel-info'>";
            echo "<div class='panel-heading'>";
@@ -84,7 +85,7 @@ $no=1;
              echo "</div>";
              echo "<div class='col-md-6'>";
              echo "<form action='update.php' method='POST'>";
-             echo "<input type='hidden' name='id' value='$no'>";
+             echo "<input type='hidden' name='post_id' value='$post_id'>";
              echo "<input type='submit' value='update'>";
              echo "</form>";
              echo "</div>";
@@ -113,7 +114,7 @@ $no=1;
       ?>
     </ul>
   </div>
-    
+
   </div>
 </div>
 
@@ -122,7 +123,7 @@ $no=1;
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->

@@ -1,5 +1,7 @@
 <?php
 include("connect.php");
+$post_id=$_POST['post_id'];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,7 +33,7 @@ include("connect.php");
       <li style="padding-left: 300px"><a href="#">Home</a></li>
       <li><a href="#">Pricing</a></li>
       <li><a href="#">Premium</a></li>
-    </ul> 
+    </ul>
     </div>
   </div>
 </div>
@@ -40,11 +42,12 @@ include("connect.php");
   <?php
   session_start();
   $email=$_SESSION['email'];
+  //echo "this is $post_id";
   ?>
   <form action="update1.php" method="post">
   <div class="form-group">
     <textarea class="form-control" placeholder="What's in your mind" name="text"></textarea>
-    <input type="hidden" name="email" value="<?php echo $email;?>">
+    <input type="hidden" name="post_id" value="<?php echo $post_id;?>">
     <br>
     <button type="submit" class="btn btn-info btn-block">Update</button>
   </div>
@@ -54,7 +57,7 @@ include("connect.php");
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
